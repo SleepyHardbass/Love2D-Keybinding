@@ -3,7 +3,7 @@ Love2D-Keybinding: in progress
 
 # Usage
 ```lua
-keybinding = require("keybinding"); keybinding:init()
+local keybinding = require("keybinding"); keybinding:init()
 
 keybinding:bind('x', "press", function()
     print("\nStart Shooting")
