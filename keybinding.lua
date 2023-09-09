@@ -1,5 +1,6 @@
 return {
     __STATUS = "in progress",
+    __LICENSE = "MIT License",
     __URL = "https://github.com/SleepyHardbass/Love2D-Keybinding",
     __VERSION = "11.4",
     __WARNMSG = "Keybinding version is (%s)\nIt may not be compatible with the running version (%s)\n\n",
