@@ -5,15 +5,15 @@ Love2D-Keybinding: in progress
 ```lua
 keybinding = require("keybinding"); keybinding:init()
 
-keybinding:bind("x", "press", function()
+keybinding:bind('x', "press", function()
     print("\nStart Shooting")
 end)
 
-keybinding:bind("x", "hold", function()
+keybinding:bind('x', "hold", function()
     print("Ra-Ta-Ta Ta-Ta")
 end)
 
-keybinding:bind("x", "release", function()
+keybinding:bind('x', "release", function()
     print("Stop Shooting")
 end)
 
