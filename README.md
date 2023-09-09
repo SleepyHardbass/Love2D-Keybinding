@@ -29,4 +29,12 @@ function love.update(delta)
     keybinding:update(delta)
 end
 
+--[[
+love.keypressed('x')
+keybinding:update() --> Start Shooting
+keybinding:update() --> Ra-Ta-Ta Ta-Ta
+keybinding:update() --> Ra-Ta-Ta Ta-Ta
+love.keyreleased('x')
+keybinding:update() --> Stop Shooting
+--]]
 ```
