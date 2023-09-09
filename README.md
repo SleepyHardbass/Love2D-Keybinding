@@ -2,7 +2,7 @@
 Love2D-Keybinding: in progress
 
 # Usage
-```
+```lua
 keybinding = require("keybinding"); keybinding:init()
 
 keybinding:bind("x", "press", function()
@@ -29,4 +29,4 @@ function love.update(delta)
     keybinding:update(delta)
 end
 
-```lua
+```
