@@ -197,7 +197,7 @@ return {
             self.bindlist[index] = self.__EMPTY -- press
             self.bindlist[index + 1] = self.__EMPTY -- hold
             self.bindlist[index + 2] = self.__EMPTY -- release
-            index = index + 3
+            index = bit.bor(index + 3)
         end
     end,
     
@@ -220,26 +220,26 @@ return {
     
     keypressed = function(self, key)
         local keyindex = self.__KEYS[key]
-        local index = self.queue[0] + 1
+        local index = bit.bor(self.queue[0] + 1)
         self.queue[0] = index
         self.queue[index] = self.bindlist[keyindex] -- press binding
         
-        index = self.stack[0] + 1
+        index = bit.bor(self.stack[0] + 1)
         self.stack[0] = index
         self.stack[index] = self.bindlist[keyindex + 1] -- hold binding
     end,
     
     keyreleased = function(self, key)
         local keyindex = self.__KEYS[key]
-        local index = self.queue[0] + 1
+        local index = bit.bor(self.queue[0] + 1)
         self.queue[0] = index
         self.queue[index] = self.bindlist[keyindex + 2] -- release binding
         
         -- HER-NYA --
         if self:__REMOVE(self.queue, self.bindlist[keyindex + 1], self.separator) then
-            self.separator = self.separator - 1
+            self.separator = bit.bor(self.separator - 1)
         elseif self:__REMOVE(self.stack, self.bindlist[keyindex + 1], self.stack[0]) then
-            self.stack[0] = self.stack[0] - 1
+            self.stack[0] = bit.bor(self.stack[0] - 1)
         end
     end,
     
